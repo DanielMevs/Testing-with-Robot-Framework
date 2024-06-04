@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.6 on win32)" generated="2024-06-03T18:27:19.941498" rpa="false" schemaversion="5">
+<suite id="s1" name="testDemo1" source="C:\Users\danny\Documents\automation_development\robot_scripts\practice\Tests\testDemo1.robot">
+<test id="s1-t1" name="Validate Unsuccessful Login" line="10">
+<kw name="open the browser with the Mortgage payment url">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-03T18:27:20.119531" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<msg time="2024-06-03T18:27:20.607812" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (125.0.6422.77); currently, chromedriver 125.0.6422.141 is recommended for chrome 125.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-06-03T18:27:24.067679" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-06-03T18:27:24.067679" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 123
+Current browser version is 125.0.6422.77 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF70D017032+63090]
+	(No symbol) [0x00007FF70CF82C82]
+	(No symbol) [0x00007FF70CE1EC65]
+	(No symbol) [0x00007FF70CE554C2]
+	(No symbol) [0x00007FF70CE548CF]
+	(No symbol) [0x00007FF70CE4E8C5]
+	(No symbol) [0x00007FF70CE4B2F4]
+	(No symbol) [0x00007FF70CE90BFB]
+	(No symbol) [0x00007FF70CE90830]
+	(No symbol) [0x00007FF70CE86D83]
+	(No symbol) [0x00007FF70CE583A8]
+	(No symbol) [0x00007FF70CE59441]
+	GetHandleVerifier [0x00007FF70D4125AD+4238317]
+	GetHandleVerifier [0x00007FF70D44F70D+4488525]
+	GetHandleVerifier [0x00007FF70D4479EF+4456495]
+	GetHandleVerifier [0x00007FF70D0F0576+953270]
+	(No symbol) [0x00007FF70CF8E54F]
+	(No symbol) [0x00007FF70CF89224]
+	(No symbol) [0x00007FF70CF8935B]
+	(No symbol) [0x00007FF70CF79B94]
+	BaseThreadInitThunk [0x00007FFB76CF257D+29]
+	RtlUserThreadStart [0x00007FFB7842AA48+40]
+</msg>
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-06-03T18:27:20.119531" elapsed="3.951147">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 123
+Current browser version is 125.0.6422.77 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF70D017032+63090]
+	(No symbol) [0x00007FF70CF82C82]
+	(No symbol) [0x00007FF70CE1EC65]
+	(No symbol) [0x00007FF70CE554C2]
+	(No symbol) [0x00007FF70CE548CF]
+	(No symbol) [0x00007FF70CE4E8C5]
+	(No symbol) [0x00007FF70CE4B2F4]
+	(No symbol) [0x00007FF70CE90BFB]
+	(No symbol) [0x00007FF70CE90830]
+	(No symbol) [0x00007FF70CE86D83]
+	(No symbol) [0x00007FF70CE583A8]
+	(No symbol) [0x00007FF70CE59441]
+	GetHandleVerifier [0x00007FF70D4125AD+4238317]
+	GetHandleVerifier [0x00007FF70D44F70D+4488525]
+	GetHandleVerifier [0x00007FF70D4479EF+4456495]
+	GetHandleVerifier [0x00007FF70D0F0576+953270]
+	(No symbol) [0x00007FF70CF8E54F]
+	(No symbol) [0x00007FF70CF89224]
+	(No symbol) [0x00007FF70CF8935B]
+	(No symbol) [0x00007FF70CF79B94]
+	BaseThreadInitThunk [0x00007FFB76CF257D+29]
+	RtlUserThreadStart [0x00007FFB7842AA48+40]
+</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-06-03T18:27:24.071684" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-06-03T18:27:20.118531" elapsed="3.953153">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 123
+Current browser version is 125.0.6422.77 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF70D017032+63090]
+	(No symbol) [0x00007FF70CF82C82]
+	(No symbol) [0x00007FF70CE1EC65]
+	(No symbol) [0x00007FF70CE554C2]
+	(No symbol) [0x00007FF70CE548CF]
+	(No symbol) [0x00007FF70CE4E8C5]
+	(No symbol) [0x00007FF70CE4B2F4]
+	(No symbol) [0x00007FF70CE90BFB]
+	(No symbol) [0x00007FF70CE90830]
+	(No symbol) [0x00007FF70CE86D83]
+	(No symbol) [0x00007FF70CE583A8]
+	(No symbol) [0x00007FF70CE59441]
+	GetHandleVerifier [0x00007FF70D4125AD+4238317]
+	GetHandleVerifier [0x00007FF70D44F70D+4488525]
+	GetHandleVerifier [0x00007FF70D4479EF+4456495]
+	GetHandleVerifier [0x00007FF70D0F0576+953270]
+	(No symbol) [0x00007FF70CF8E54F]
+	(No symbol) [0x00007FF70CF89224]
+	(No symbol) [0x00007FF70CF8935B]
+	(No symbol) [0x00007FF70CF79B94]
+	BaseThreadInitThunk [0x00007FFB76CF257D+29]
+	RtlUserThreadStart [0x00007FFB7842AA48+40]
+</status>
+</kw>
+<kw name="Fill the login form">
+<status status="NOT RUN" start="2024-06-03T18:27:24.071684" elapsed="0.000000"/>
+</kw>
+<kw name="Wait until it checks and display error message">
+<status status="NOT RUN" start="2024-06-03T18:27:24.072683" elapsed="0.000000"/>
+</kw>
+<kw name="Verify error message is correct">
+<status status="NOT RUN" start="2024-06-03T18:27:24.072683" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-03T18:27:24.072683" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-06-03T18:27:20.117529" elapsed="3.955154">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 123
+Current browser version is 125.0.6422.77 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF70D017032+63090]
+	(No symbol) [0x00007FF70CF82C82]
+	(No symbol) [0x00007FF70CE1EC65]
+	(No symbol) [0x00007FF70CE554C2]
+	(No symbol) [0x00007FF70CE548CF]
+	(No symbol) [0x00007FF70CE4E8C5]
+	(No symbol) [0x00007FF70CE4B2F4]
+	(No symbol) [0x00007FF70CE90BFB]
+	(No symbol) [0x00007FF70CE90830]
+	(No symbol) [0x00007FF70CE86D83]
+	(No symbol) [0x00007FF70CE583A8]
+	(No symbol) [0x00007FF70CE59441]
+	GetHandleVerifier [0x00007FF70D4125AD+4238317]
+	GetHandleVerifier [0x00007FF70D44F70D+4488525]
+	GetHandleVerifier [0x00007FF70D4479EF+4456495]
+	GetHandleVerifier [0x00007FF70D0F0576+953270]
+	(No symbol) [0x00007FF70CF8E54F]
+	(No symbol) [0x00007FF70CF89224]
+	(No symbol) [0x00007FF70CF8935B]
+	(No symbol) [0x00007FF70CF79B94]
+	BaseThreadInitThunk [0x00007FFB76CF257D+29]
+	RtlUserThreadStart [0x00007FFB7842AA48+40]
+</status>
+</test>
+<doc>To validate Login form</doc>
+<status status="FAIL" start="2024-06-03T18:27:19.943498" elapsed="4.131185"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="testDemo1">testDemo1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-03T18:27:20.607812" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (125.0.6422.77); currently, chromedriver 125.0.6422.141 is recommended for chrome 125.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

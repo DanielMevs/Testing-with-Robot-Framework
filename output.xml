@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.6 on win32)" generated="2024-06-03T18:36:31.595900" rpa="false" schemaversion="5">
+<suite id="s1" name="Practice" source="C:\Users\danny\Documents\automation_development\robot_scripts\practice">
+<suite id="s1-s1" name="Tests" source="C:\Users\danny\Documents\automation_development\robot_scripts\practice\Tests">
+<suite id="s1-s1-s1" name="testDemo1" source="C:\Users\danny\Documents\automation_development\robot_scripts\practice\Tests\testDemo1.robot">
+<test id="s1-s1-s1-t1" name="Validate Unsuccessful Login" line="10">
+<kw name="open the browser with the Mortgage payment url">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-03T18:36:31.794551" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-03T18:36:31.794551" elapsed="4.110162"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-03T18:36:37.910532" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-03T18:36:35.904713" elapsed="2.006009"/>
+</kw>
+<status status="PASS" start="2024-06-03T18:36:31.792546" elapsed="6.118176"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-03T18:36:37.911942" level="INFO">Typing text 'raulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>raulshettyacademy</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-03T18:36:37.911942" elapsed="0.142825"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-03T18:36:38.054767" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-06-03T18:36:38.084772" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>12345678</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-03T18:36:38.054767" elapsed="0.099164"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-03T18:36:38.154930" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-03T18:36:38.153931" elapsed="0.051153"/>
+</kw>
+<status status="PASS" start="2024-06-03T18:36:37.911942" elapsed="0.293142"/>
+</kw>
+<kw name="Wait until it checks and display error message">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Error_Message_Login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-03T18:36:38.206119" elapsed="2.175640"/>
+</kw>
+<status status="PASS" start="2024-06-03T18:36:38.205605" elapsed="2.176154"/>
+</kw>
+<kw name="Verify error message is correct">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-03T18:36:40.383427" level="INFO">Verifying element 'class:alert-danger' contains exact text 'Incorrect username/password.'.</msg>
+<arg>${Error_Message_Login}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-03T18:36:40.382799" elapsed="0.016017"/>
+</kw>
+<status status="PASS" start="2024-06-03T18:36:40.382266" elapsed="0.018305"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-03T18:36:40.400571" elapsed="2.176007"/>
+</kw>
+<status status="PASS" start="2024-06-03T18:36:31.792546" elapsed="10.784563"/>
+</test>
+<doc>To validate Login form</doc>
+<status status="PASS" start="2024-06-03T18:36:31.621598" elapsed="10.956041"/>
+</suite>
+<status status="PASS" start="2024-06-03T18:36:31.620562" elapsed="10.958752"/>
+</suite>
+<status status="PASS" start="2024-06-03T18:36:31.597960" elapsed="10.983435"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Practice">Practice</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Practice.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="testDemo1">Practice.Tests.testDemo1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
