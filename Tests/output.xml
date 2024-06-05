@@ -1,154 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.10.6 on win32)" generated="2024-06-03T18:27:19.941498" rpa="false" schemaversion="5">
-<suite id="s1" name="testDemo1" source="C:\Users\danny\Documents\automation_development\robot_scripts\practice\Tests\testDemo1.robot">
-<test id="s1-t1" name="Validate Unsuccessful Login" line="10">
-<kw name="open the browser with the Mortgage payment url">
+<robot generator="Robot 7.0 (Python 3.10.6 on win32)" generated="2024-06-04T17:11:28.870901" rpa="false" schemaversion="5">
+<suite id="s1" name="testDemo2" source="C:\Users\danny\Documents\automation_development\robot_scripts\practice\Tests\testDemo2.robot">
+<test id="s1-t1" name="Validate Unsuccessful Login" line="12">
+<kw name="open the browser with the Mortgage payment url" owner="resource" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-03T18:27:20.119531" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
-<msg time="2024-06-03T18:27:20.607812" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (125.0.6422.77); currently, chromedriver 125.0.6422.141 is recommended for chrome 125.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-06-03T18:27:24.067679" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg time="2024-06-03T18:27:24.067679" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 123
-Current browser version is 125.0.6422.77 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
-Stacktrace:
-	GetHandleVerifier [0x00007FF70D017032+63090]
-	(No symbol) [0x00007FF70CF82C82]
-	(No symbol) [0x00007FF70CE1EC65]
-	(No symbol) [0x00007FF70CE554C2]
-	(No symbol) [0x00007FF70CE548CF]
-	(No symbol) [0x00007FF70CE4E8C5]
-	(No symbol) [0x00007FF70CE4B2F4]
-	(No symbol) [0x00007FF70CE90BFB]
-	(No symbol) [0x00007FF70CE90830]
-	(No symbol) [0x00007FF70CE86D83]
-	(No symbol) [0x00007FF70CE583A8]
-	(No symbol) [0x00007FF70CE59441]
-	GetHandleVerifier [0x00007FF70D4125AD+4238317]
-	GetHandleVerifier [0x00007FF70D44F70D+4488525]
-	GetHandleVerifier [0x00007FF70D4479EF+4456495]
-	GetHandleVerifier [0x00007FF70D0F0576+953270]
-	(No symbol) [0x00007FF70CF8E54F]
-	(No symbol) [0x00007FF70CF89224]
-	(No symbol) [0x00007FF70CF8935B]
-	(No symbol) [0x00007FF70CF79B94]
-	BaseThreadInitThunk [0x00007FFB76CF257D+29]
-	RtlUserThreadStart [0x00007FFB7842AA48+40]
-</msg>
-<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<msg time="2024-06-04T17:11:29.062561" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>${url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2024-06-03T18:27:20.119531" elapsed="3.951147">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 123
-Current browser version is 125.0.6422.77 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
-Stacktrace:
-	GetHandleVerifier [0x00007FF70D017032+63090]
-	(No symbol) [0x00007FF70CF82C82]
-	(No symbol) [0x00007FF70CE1EC65]
-	(No symbol) [0x00007FF70CE554C2]
-	(No symbol) [0x00007FF70CE548CF]
-	(No symbol) [0x00007FF70CE4E8C5]
-	(No symbol) [0x00007FF70CE4B2F4]
-	(No symbol) [0x00007FF70CE90BFB]
-	(No symbol) [0x00007FF70CE90830]
-	(No symbol) [0x00007FF70CE86D83]
-	(No symbol) [0x00007FF70CE583A8]
-	(No symbol) [0x00007FF70CE59441]
-	GetHandleVerifier [0x00007FF70D4125AD+4238317]
-	GetHandleVerifier [0x00007FF70D44F70D+4488525]
-	GetHandleVerifier [0x00007FF70D4479EF+4456495]
-	GetHandleVerifier [0x00007FF70D0F0576+953270]
-	(No symbol) [0x00007FF70CF8E54F]
-	(No symbol) [0x00007FF70CF89224]
-	(No symbol) [0x00007FF70CF8935B]
-	(No symbol) [0x00007FF70CF79B94]
-	BaseThreadInitThunk [0x00007FFB76CF257D+29]
-	RtlUserThreadStart [0x00007FFB7842AA48+40]
-</status>
+<status status="PASS" start="2024-06-04T17:11:29.062561" elapsed="3.043459"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-06-03T18:27:24.071684" elapsed="0.000000"/>
-</kw>
-<status status="FAIL" start="2024-06-03T18:27:20.118531" elapsed="3.953153">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 123
-Current browser version is 125.0.6422.77 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
-Stacktrace:
-	GetHandleVerifier [0x00007FF70D017032+63090]
-	(No symbol) [0x00007FF70CF82C82]
-	(No symbol) [0x00007FF70CE1EC65]
-	(No symbol) [0x00007FF70CE554C2]
-	(No symbol) [0x00007FF70CE548CF]
-	(No symbol) [0x00007FF70CE4E8C5]
-	(No symbol) [0x00007FF70CE4B2F4]
-	(No symbol) [0x00007FF70CE90BFB]
-	(No symbol) [0x00007FF70CE90830]
-	(No symbol) [0x00007FF70CE86D83]
-	(No symbol) [0x00007FF70CE583A8]
-	(No symbol) [0x00007FF70CE59441]
-	GetHandleVerifier [0x00007FF70D4125AD+4238317]
-	GetHandleVerifier [0x00007FF70D44F70D+4488525]
-	GetHandleVerifier [0x00007FF70D4479EF+4456495]
-	GetHandleVerifier [0x00007FF70D0F0576+953270]
-	(No symbol) [0x00007FF70CF8E54F]
-	(No symbol) [0x00007FF70CF89224]
-	(No symbol) [0x00007FF70CF8935B]
-	(No symbol) [0x00007FF70CF79B94]
-	BaseThreadInitThunk [0x00007FFB76CF257D+29]
-	RtlUserThreadStart [0x00007FFB7842AA48+40]
-</status>
+<status status="PASS" start="2024-06-04T17:11:29.061561" elapsed="3.045461"/>
 </kw>
 <kw name="Fill the login form">
-<status status="NOT RUN" start="2024-06-03T18:27:24.071684" elapsed="0.000000"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-04T17:11:32.108021" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T17:11:32.108021" elapsed="0.162032"/>
 </kw>
-<kw name="Wait until it checks and display error message">
-<status status="NOT RUN" start="2024-06-03T18:27:24.072683" elapsed="0.000000"/>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-04T17:11:32.272051" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-06-04T17:11:32.305555" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T17:11:32.271054" elapsed="0.103050"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-04T17:11:32.374631" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T17:11:32.374631" elapsed="0.049657"/>
+</kw>
+<arg>${user_name}</arg>
+<arg>${invalid_password}</arg>
+<status status="PASS" start="2024-06-04T17:11:32.107022" elapsed="0.317266"/>
+</kw>
+<kw name="Wait until Element is visible on the page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-04T17:11:32.425288" elapsed="2.028660"/>
+</kw>
+<arg>${Error_Message_Login}</arg>
+<status status="PASS" start="2024-06-04T17:11:32.425288" elapsed="2.028660"/>
 </kw>
 <kw name="Verify error message is correct">
-<status status="NOT RUN" start="2024-06-03T18:27:24.072683" elapsed="0.000000"/>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-04T17:11:34.454947" level="INFO">Verifying element 'class:alert-danger' contains exact text 'Incorrect username/password.'.</msg>
+<arg>${Error_Message_Login}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-04T17:11:34.454947" elapsed="0.015999"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<status status="PASS" start="2024-06-04T17:11:34.454947" elapsed="0.015999"/>
+</kw>
+<kw name="Close Browser session" owner="resource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-03T18:27:24.072683" elapsed="0.000000"/>
+<status status="PASS" start="2024-06-04T17:11:34.471947" elapsed="2.182668"/>
 </kw>
-<status status="FAIL" start="2024-06-03T18:27:20.117529" elapsed="3.955154">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 123
-Current browser version is 125.0.6422.77 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
-Stacktrace:
-	GetHandleVerifier [0x00007FF70D017032+63090]
-	(No symbol) [0x00007FF70CF82C82]
-	(No symbol) [0x00007FF70CE1EC65]
-	(No symbol) [0x00007FF70CE554C2]
-	(No symbol) [0x00007FF70CE548CF]
-	(No symbol) [0x00007FF70CE4E8C5]
-	(No symbol) [0x00007FF70CE4B2F4]
-	(No symbol) [0x00007FF70CE90BFB]
-	(No symbol) [0x00007FF70CE90830]
-	(No symbol) [0x00007FF70CE86D83]
-	(No symbol) [0x00007FF70CE583A8]
-	(No symbol) [0x00007FF70CE59441]
-	GetHandleVerifier [0x00007FF70D4125AD+4238317]
-	GetHandleVerifier [0x00007FF70D44F70D+4488525]
-	GetHandleVerifier [0x00007FF70D4479EF+4456495]
-	GetHandleVerifier [0x00007FF70D0F0576+953270]
-	(No symbol) [0x00007FF70CF8E54F]
-	(No symbol) [0x00007FF70CF89224]
-	(No symbol) [0x00007FF70CF8935B]
-	(No symbol) [0x00007FF70CF79B94]
-	BaseThreadInitThunk [0x00007FFB76CF257D+29]
-	RtlUserThreadStart [0x00007FFB7842AA48+40]
-</status>
+<status status="PASS" start="2024-06-04T17:11:34.471947" elapsed="2.183669"/>
+</kw>
+<status status="PASS" start="2024-06-04T17:11:29.060561" elapsed="7.595055"/>
+</test>
+<test id="s1-t2" name="Validate Cards display in the Shopping Page" line="18">
+<kw name="open the browser with the Mortgage payment url" owner="resource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-04T17:11:36.656617" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-04T17:11:36.656617" elapsed="2.735889"/>
+</kw>
+<status status="PASS" start="2024-06-04T17:11:36.656617" elapsed="2.736889"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-04T17:11:39.395505" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T17:11:39.394506" elapsed="0.165035"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-04T17:11:39.560545" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-06-04T17:11:39.596549" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T17:11:39.560545" elapsed="0.105508"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-04T17:11:39.667054" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T17:11:39.667054" elapsed="0.060132"/>
+</kw>
+<arg>${user_name}</arg>
+<arg>${valid_password}</arg>
+<status status="PASS" start="2024-06-04T17:11:39.393506" elapsed="0.334681"/>
+</kw>
+<kw name="Wait until Element is visible on the page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-04T17:11:39.729186" elapsed="4.457284"/>
+</kw>
+<arg>${Shop_page_load}</arg>
+<status status="PASS" start="2024-06-04T17:11:39.729186" elapsed="4.457284"/>
+</kw>
+<kw name="Close Browser session" owner="resource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-04T17:11:44.187470" elapsed="2.165317"/>
+</kw>
+<status status="PASS" start="2024-06-04T17:11:44.186470" elapsed="2.166317"/>
+</kw>
+<status status="PASS" start="2024-06-04T17:11:36.656617" elapsed="9.697169"/>
 </test>
 <doc>To validate Login form</doc>
-<status status="FAIL" start="2024-06-03T18:27:19.943498" elapsed="4.131185"/>
+<status status="PASS" start="2024-06-04T17:11:28.871902" elapsed="17.482887"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="testDemo1">testDemo1</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="testDemo2">testDemo2</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-06-03T18:27:20.607812" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (125.0.6422.77); currently, chromedriver 125.0.6422.141 is recommended for chrome 125.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

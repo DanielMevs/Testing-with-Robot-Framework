@@ -9,14 +9,14 @@ Library          OperatingSystem
 
 
 *** Variables ***
-${user_name}            raulshettyacademy
+${user_name}            rahulshettyacademy
 ${invalid_password}     123445
+${valid_password}       learning
 ${url}                  https://rahulshettyacademy.com/loginpagePractise/
 
 *** Keywords ***
 open the browser with the Mortgage payment url
     Open Browser    ${url}    chrome
-    Sleep    2s
 
 Close Browser session
     Close Browser
