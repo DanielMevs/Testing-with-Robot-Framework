@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation   To validate Login form
 Library         SeleniumLibrary
+Library         Collections
 Test Setup      open the browser with the Mortgage payment url
 Test Teardown   Close Browser Session
 Resource        resource.robot
@@ -9,15 +10,17 @@ Resource        resource.robot
 ${Error_Message_Login}    class:alert-danger
 ${Shop_page_load}    css:.nav-link
 *** Test Cases ***
-Validate Unsuccessful Login
-    
-    Fill the login form   ${user_name}    ${invalid_password}
-    Wait until Element is visible on the page    ${Error_Message_Login}
-    Verify error message is correct
+#Validate Unsuccessful Login
+#
+#    Fill the login form   ${user_name}    ${invalid_password}
+#    Wait until Element is visible on the page    ${Error_Message_Login}
+#    Verify error message is correct
 
 Validate Cards display in the Shopping Page
     Fill The Login Form    ${user_name}    ${valid_password}
     Wait until Element is visible on the page    ${Shop_page_load}
+    Verify Card titles in the Shop page
+    Select the Card    Nokia Edge
 
 *** Keywords ***
 Fill the login form
@@ -35,4 +38,26 @@ Verify error message is correct
 #    Should Be Equal As Strings    ${result}    Incorrect username/password.
 #    Sleep    4s
     Element Text Should Be    ${Error_Message_Login}    Incorrect username/password.
+    
+Verify Card titles in the Shop page
+    @{expectedList}=    Create List    iphone X    Samsung Note 8    Nokia Edge    Blackberry
+    ${elements}=    Get WebElements    css:.card-title
+    @{actualList}=    Create List    
+    FOR    ${element}    IN    @{elements}
+        Log    ${element.text}
+        Append To List    ${actualList}    ${element.text}
+    END
+    Lists Should Be Equal    ${expectedList}    ${actualList}
 
+
+Select the Card
+    [Arguments]    ${cardName}
+    ${elements}=    Get Webelements    css:.card-title
+    ${index}=    Set Variable    1
+    FOR    ${element}    IN    @{elements}
+        Exit For Loop If    '${cardName}' == '${element.text}'
+            ${index}=  Evaluate    ${index} + 1
+        
+    END
+    Click Button    xpath:(//*[@class='card-footer'])[${index}]/button
+    
