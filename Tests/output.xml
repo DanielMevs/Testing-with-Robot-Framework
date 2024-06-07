@@ -1,251 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.10.6 on win32)" generated="2024-06-05T17:48:05.984988" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.10.6 on win32)" generated="2024-06-06T17:48:45.440487" rpa="false" schemaversion="5">
 <suite id="s1" name="testDemo2" source="C:\Users\danny\Documents\automation_development\robot_scripts\practice\Tests\testDemo2.robot">
-<test id="s1-t1" name="Validate Cards display in the Shopping Page" line="19">
+<test id="s1-t1" name="Select the Form and navigate to Child window" line="25">
 <kw name="open the browser with the Mortgage payment url" owner="resource" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-05T17:48:06.177024" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<msg time="2024-06-06T17:48:45.605007" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
 <arg>${url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-05T17:48:06.177024" elapsed="3.905486"/>
+<status status="PASS" start="2024-06-06T17:48:45.604007" elapsed="2.889641"/>
 </kw>
-<status status="PASS" start="2024-06-05T17:48:06.175025" elapsed="3.908603"/>
+<status status="PASS" start="2024-06-06T17:48:45.604007" elapsed="2.890638"/>
 </kw>
-<kw name="Fill the login form">
+<kw name="Fill the Login Details and Form">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-05T17:48:10.086148" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<msg time="2024-06-06T17:48:48.496647" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
 <arg>id:username</arg>
-<arg>${username}</arg>
+<arg>rahulshettyacademy</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-05T17:48:10.085143" elapsed="0.186121"/>
+<status status="PASS" start="2024-06-06T17:48:48.495648" elapsed="0.174067"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-06-05T17:48:10.272267" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2024-06-05T17:48:10.305266" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-06-06T17:48:48.670233" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-06-06T17:48:48.705886" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>id:password</arg>
-<arg>${password}</arg>
+<arg>learning</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-05T17:48:10.271264" elapsed="0.111525"/>
+<status status="PASS" start="2024-06-06T17:48:48.670233" elapsed="0.117874"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-06-05T17:48:10.383788" level="INFO">Clicking button 'signInBtn'.</msg>
-<arg>signInBtn</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-05T17:48:10.382789" elapsed="0.051522"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-06T17:48:48.789108" level="INFO">Clicking element 'css:input[value='user']'.</msg>
+<arg>css:input[value='user']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T17:48:48.788107" elapsed="0.049048"/>
 </kw>
-<arg>${user_name}</arg>
-<arg>${valid_password}</arg>
-<status status="PASS" start="2024-06-05T17:48:10.084136" elapsed="0.350175"/>
-</kw>
-<kw name="Wait until Element is visible on the page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${element}</arg>
+<arg>css:.modal-body</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-05T17:48:10.435311" elapsed="4.935255"/>
+<status status="PASS" start="2024-06-06T17:48:48.837155" elapsed="0.242041"/>
 </kw>
-<arg>${Shop_page_load}</arg>
-<status status="PASS" start="2024-06-05T17:48:10.434311" elapsed="4.936255"/>
-</kw>
-<kw name="Verify Card titles in the Shop page">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-06-05T17:48:15.372565" level="INFO">@{expectedList} = [ iphone X | Samsung Note 8 | Nokia Edge | Blackberry ]</msg>
-<var>@{expectedList}</var>
-<arg>iphone X</arg>
-<arg>Samsung Note 8</arg>
-<arg>Nokia Edge</arg>
-<arg>Blackberry</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.372565" elapsed="0.000000"/>
-</kw>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-06-05T17:48:15.386567" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="3e6447512baf754e3b14d8c0d196dcef", element="f.CF3AF64DFE46CCC0725E91574D0A3B6D.d.A6C21B5F2F18E267E296F1AE3F1073BF.e.71")&gt;, &lt;selenium.webdriv...</msg>
-<var>${elements}</var>
-<arg>css:.card-title</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.372565" elapsed="0.014002"/>
-</kw>
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-06-05T17:48:15.386567" level="INFO">@{actualList} = [ ]</msg>
-<var>@{actualList}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.386567" elapsed="0.000998"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-06-05T17:48:15.420579" level="INFO">iphone X</msg>
-<arg>${element.text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.387565" elapsed="0.033014"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${actualList}</arg>
-<arg>${element.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.421579" elapsed="0.016515"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="3e6447512baf754e3b14d8c0d196dcef", element="f.CF3AF64DFE46CCC0725E91574D0A3B6D.d.A6C21B5F2F18E267E296F1AE3F1073BF.e.71")&gt;</var>
-<status status="PASS" start="2024-06-05T17:48:15.387565" elapsed="0.050529"/>
-</iter>
-<iter>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-06-05T17:48:15.455096" level="INFO">Samsung Note 8</msg>
-<arg>${element.text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.438094" elapsed="0.017002"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${actualList}</arg>
-<arg>${element.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.455096" elapsed="0.017000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="3e6447512baf754e3b14d8c0d196dcef", element="f.CF3AF64DFE46CCC0725E91574D0A3B6D.d.A6C21B5F2F18E267E296F1AE3F1073BF.e.72")&gt;</var>
-<status status="PASS" start="2024-06-05T17:48:15.438094" elapsed="0.034002"/>
-</iter>
-<iter>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-06-05T17:48:15.485094" level="INFO">Nokia Edge</msg>
-<arg>${element.text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.473094" elapsed="0.012000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${actualList}</arg>
-<arg>${element.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.485094" elapsed="0.011001"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="3e6447512baf754e3b14d8c0d196dcef", element="f.CF3AF64DFE46CCC0725E91574D0A3B6D.d.A6C21B5F2F18E267E296F1AE3F1073BF.e.73")&gt;</var>
-<status status="PASS" start="2024-06-05T17:48:15.473094" elapsed="0.023001"/>
-</iter>
-<iter>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-06-05T17:48:15.506094" level="INFO">Blackberry</msg>
-<arg>${element.text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.496095" elapsed="0.009999"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${actualList}</arg>
-<arg>${element.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.507093" elapsed="0.011009"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="3e6447512baf754e3b14d8c0d196dcef", element="f.CF3AF64DFE46CCC0725E91574D0A3B6D.d.A6C21B5F2F18E267E296F1AE3F1073BF.e.74")&gt;</var>
-<status status="PASS" start="2024-06-05T17:48:15.496095" elapsed="0.022007"/>
-</iter>
-<var>${element}</var>
-<value>@{elements}</value>
-<status status="PASS" start="2024-06-05T17:48:15.387565" elapsed="0.131540"/>
-</for>
-<kw name="Lists Should Be Equal" owner="Collections">
-<msg time="2024-06-05T17:48:15.519105" level="INFO">False</msg>
-<arg>${expectedList}</arg>
-<arg>${actualList}</arg>
-<doc>Fails if given lists are unequal.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.519105" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-06-05T17:48:15.371565" elapsed="0.147540"/>
-</kw>
-<kw name="Select the Card">
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-06-05T17:48:15.528103" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="3e6447512baf754e3b14d8c0d196dcef", element="f.CF3AF64DFE46CCC0725E91574D0A3B6D.d.A6C21B5F2F18E267E296F1AE3F1073BF.e.71")&gt;, &lt;selenium.webdriv...</msg>
-<var>${elements}</var>
-<arg>css:.card-title</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.520104" elapsed="0.007999"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-06-05T17:48:15.529101" level="INFO">${index} = 1</msg>
-<var>${index}</var>
-<arg>1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.528103" elapsed="0.000998"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${cardName}' == '${element.text}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.529101" elapsed="0.012080"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-06-05T17:48:15.542181" level="INFO">${index} = 2</msg>
-<var>${index}</var>
-<arg>${index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.541181" elapsed="0.001000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="3e6447512baf754e3b14d8c0d196dcef", element="f.CF3AF64DFE46CCC0725E91574D0A3B6D.d.A6C21B5F2F18E267E296F1AE3F1073BF.e.71")&gt;</var>
-<status status="PASS" start="2024-06-05T17:48:15.529101" elapsed="0.013080"/>
-</iter>
-<iter>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${cardName}' == '${element.text}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.542181" elapsed="0.009002"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-06-05T17:48:15.552182" level="INFO">${index} = 3</msg>
-<var>${index}</var>
-<arg>${index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.551183" elapsed="0.000999"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="3e6447512baf754e3b14d8c0d196dcef", element="f.CF3AF64DFE46CCC0725E91574D0A3B6D.d.A6C21B5F2F18E267E296F1AE3F1073BF.e.72")&gt;</var>
-<status status="PASS" start="2024-06-05T17:48:15.542181" elapsed="0.010001"/>
-</iter>
-<iter>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<msg time="2024-06-05T17:48:15.565183" level="INFO">Exiting for loop altogether.</msg>
-<arg>'${cardName}' == '${element.text}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.552182" elapsed="0.013001"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<var>${index}</var>
-<arg>${index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-06-05T17:48:15.565183" elapsed="0.000999"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="3e6447512baf754e3b14d8c0d196dcef", element="f.CF3AF64DFE46CCC0725E91574D0A3B6D.d.A6C21B5F2F18E267E296F1AE3F1073BF.e.73")&gt;</var>
-<status status="PASS" start="2024-06-05T17:48:15.552182" elapsed="0.014000"/>
-</iter>
-<var>${element}</var>
-<value>@{elements}</value>
-<status status="PASS" start="2024-06-05T17:48:15.529101" elapsed="0.037081"/>
-</for>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-06-05T17:48:15.566182" level="INFO">Clicking button 'xpath:(//*[@class='card-footer'])[3]/button'.</msg>
-<arg>xpath:(//*[@class='card-footer'])[${index}]/button</arg>
+<msg time="2024-06-06T17:48:49.079196" level="INFO">Clicking button 'okayBtn'.</msg>
+<arg>okayBtn</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.566182" elapsed="0.062007"/>
+<status status="PASS" start="2024-06-06T17:48:49.079196" elapsed="0.044520"/>
 </kw>
-<arg>Nokia Edge</arg>
-<status status="PASS" start="2024-06-05T17:48:15.520104" elapsed="0.108085"/>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-06-06T17:48:49.123716" level="INFO">Selecting options from selection list 'css:select.form-control' by value teach.</msg>
+<arg>css:select.form-control</arg>
+<arg>teach</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-06-06T17:48:49.123716" elapsed="0.060000"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-06-06T17:48:49.183716" level="INFO">Selecting checkbox 'terms'.</msg>
+<msg time="2024-06-06T17:48:50.656604" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-06T17:48:50.656604" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (397, 486). Other element would receive the click: &lt;div id="myModal" class="modal fade show" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=125.0.6422.142)
+Stacktrace:
+	GetHandleVerifier [0x00007FF694D71F52+60322]
+	(No symbol) [0x00007FF694CECEC9]
+	(No symbol) [0x00007FF694BA7EBA]
+	(No symbol) [0x00007FF694BFF32E]
+	(No symbol) [0x00007FF694BFCCF2]
+	(No symbol) [0x00007FF694BFA18B]
+	(No symbol) [0x00007FF694BF9356]
+	(No symbol) [0x00007FF694BEB491]
+	(No symbol) [0x00007FF694C1C21A]
+	(No symbol) [0x00007FF694BEADB6]
+	(No symbol) [0x00007FF694C1C430]
+	(No symbol) [0x00007FF694C3BC80]
+	(No symbol) [0x00007FF694C1BFC3]
+	(No symbol) [0x00007FF694BE9617]
+	(No symbol) [0x00007FF694BEA211]
+	GetHandleVerifier [0x00007FF6950894AD+3301629]
+	GetHandleVerifier [0x00007FF6950D36D3+3605283]
+	GetHandleVerifier [0x00007FF6950C9450+3563680]
+	GetHandleVerifier [0x00007FF694E24326+790390]
+	(No symbol) [0x00007FF694CF750F]
+	(No symbol) [0x00007FF694CF3404]
+	(No symbol) [0x00007FF694CF3592]
+	(No symbol) [0x00007FF694CE2F9F]
+	BaseThreadInitThunk [0x00007FFB76CF257D+29]
+	RtlUserThreadStart [0x00007FFB7842AA48+40]
+</msg>
+<arg>terms</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="FAIL" start="2024-06-06T17:48:49.183716" elapsed="1.476517">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (397, 486). Other element would receive the click: &lt;div id="myModal" class="modal fade show" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=125.0.6422.142)
+Stacktrace:
+	GetHandleVerifier [0x00007FF694D71F52+60322]
+	(No symbol) [0x00007FF694CECEC9]
+	(No symbol) [0x00007FF694BA7EBA]
+	(No symbol) [0x00007FF694BFF32E]
+	(No symbol) [0x00007FF694BFCCF2]
+	(No symbol) [0x00007FF694BFA18B]
+	(No symbol) [0x00007FF694BF9356]
+	(No symbol) [0x00007FF694BEB491]
+	(No symbol) [0x00007FF694C1C21A]
+	(No symbol) [0x00007FF694BEADB6]
+	(No symbol) [0x00007FF694C1C430]
+	(No symbol) [0x00007FF694C3BC80]
+	(No symbol) [0x00007FF694C1BFC3]
+	(No symbol) [0x00007FF694BE9617]
+	(No symbol) [0x00007FF694BEA211]
+	GetHandleVerifier [0x00007FF6950894AD+3301629]
+	GetHandleVerifier [0x00007FF6950D36D3+3605283]
+	GetHandleVerifier [0x00007FF6950C9450+3563680]
+	GetHandleVerifier [0x00007FF694E24326+790390]
+	(No symbol) [0x00007FF694CF750F]
+	(No symbol) [0x00007FF694CF3404]
+	(No symbol) [0x00007FF694CF3592]
+	(No symbol) [0x00007FF694CE2F9F]
+	BaseThreadInitThunk [0x00007FFB76CF257D+29]
+	RtlUserThreadStart [0x00007FFB7842AA48+40]
+</status>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<arg>terms</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="NOT RUN" start="2024-06-06T17:48:50.661239" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-06-06T17:48:48.495648" elapsed="2.165783">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (397, 486). Other element would receive the click: &lt;div id="myModal" class="modal fade show" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=125.0.6422.142)
+Stacktrace:
+	GetHandleVerifier [0x00007FF694D71F52+60322]
+	(No symbol) [0x00007FF694CECEC9]
+	(No symbol) [0x00007FF694BA7EBA]
+	(No symbol) [0x00007FF694BFF32E]
+	(No symbol) [0x00007FF694BFCCF2]
+	(No symbol) [0x00007FF694BFA18B]
+	(No symbol) [0x00007FF694BF9356]
+	(No symbol) [0x00007FF694BEB491]
+	(No symbol) [0x00007FF694C1C21A]
+	(No symbol) [0x00007FF694BEADB6]
+	(No symbol) [0x00007FF694C1C430]
+	(No symbol) [0x00007FF694C3BC80]
+	(No symbol) [0x00007FF694C1BFC3]
+	(No symbol) [0x00007FF694BE9617]
+	(No symbol) [0x00007FF694BEA211]
+	GetHandleVerifier [0x00007FF6950894AD+3301629]
+	GetHandleVerifier [0x00007FF6950D36D3+3605283]
+	GetHandleVerifier [0x00007FF6950C9450+3563680]
+	GetHandleVerifier [0x00007FF694E24326+790390]
+	(No symbol) [0x00007FF694CF750F]
+	(No symbol) [0x00007FF694CF3404]
+	(No symbol) [0x00007FF694CF3592]
+	(No symbol) [0x00007FF694CE2F9F]
+	BaseThreadInitThunk [0x00007FFB76CF257D+29]
+	RtlUserThreadStart [0x00007FFB7842AA48+40]
+</status>
 </kw>
 <kw name="Close Browser session" owner="resource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-05T17:48:15.630536" elapsed="2.201048"/>
+<status status="PASS" start="2024-06-06T17:48:50.662435" elapsed="3.652570"/>
 </kw>
-<status status="PASS" start="2024-06-05T17:48:15.629189" elapsed="2.202395"/>
+<status status="PASS" start="2024-06-06T17:48:50.661431" elapsed="3.653574"/>
 </kw>
-<status status="PASS" start="2024-06-05T17:48:06.174026" elapsed="11.657558"/>
+<status status="FAIL" start="2024-06-06T17:48:45.603005" elapsed="8.712000">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (397, 486). Other element would receive the click: &lt;div id="myModal" class="modal fade show" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=125.0.6422.142)
+Stacktrace:
+	GetHandleVerifier [0x00007FF694D71F52+60322]
+	(No symbol) [0x00007FF694CECEC9]
+	(No symbol) [0x00007FF694BA7EBA]
+	(No symbol) [0x00007FF694BFF32E]
+	(No symbol) [0x00007FF694BFCCF2]
+	(No symbol) [0x00007FF694BFA18B]
+	(No symbol) [0x00007FF694BF9356]
+	(No symbol) [0x00007FF694BEB491]
+	(No symbol) [0x00007FF694C1C21A]
+	(No symbol) [0x00007FF694BEADB6]
+	(No symbol) [0x00007FF694C1C430]
+	(No symbol) [0x00007FF694C3BC80]
+	(No symbol) [0x00007FF694C1BFC3]
+	(No symbol) [0x00007FF694BE9617]
+	(No symbol) [0x00007FF694BEA211]
+	GetHandleVerifier [0x00007FF6950894AD+3301629]
+	GetHandleVerifier [0x00007FF6950D36D3+3605283]
+	GetHandleVerifier [0x00007FF6950C9450+3563680]
+	GetHandleVerifier [0x00007FF694E24326+790390]
+	(No symbol) [0x00007FF694CF750F]
+	(No symbol) [0x00007FF694CF3404]
+	(No symbol) [0x00007FF694CF3592]
+	(No symbol) [0x00007FF694CE2F9F]
+	BaseThreadInitThunk [0x00007FFB76CF257D+29]
+	RtlUserThreadStart [0x00007FFB7842AA48+40]
+</status>
 </test>
 <doc>To validate Login form</doc>
-<status status="PASS" start="2024-06-05T17:48:05.986991" elapsed="11.845599"/>
+<status status="FAIL" start="2024-06-06T17:48:45.441488" elapsed="8.874514"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="testDemo2">testDemo2</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="testDemo2">testDemo2</stat>
 </suite>
 </statistics>
 <errors>

@@ -16,11 +16,14 @@ ${Shop_page_load}    css:.nav-link
 #    Wait until Element is visible on the page    ${Error_Message_Login}
 #    Verify error message is correct
 
-Validate Cards display in the Shopping Page
-    Fill The Login Form    ${user_name}    ${valid_password}
-    Wait until Element is visible on the page    ${Shop_page_load}
-    Verify Card titles in the Shop page
-    Select the Card    Nokia Edge
+#Validate Cards display in the Shopping Page
+#    Fill The Login Form    ${user_name}    ${valid_password}
+#    Wait until Element is visible on the page    ${Shop_page_load}
+#    Verify Card titles in the Shop page
+#    Select the Card    Nokia Edge
+
+Select the Form and navigate to Child window
+    Fill The Login Details And Form
 
 *** Keywords ***
 Fill the login form
@@ -60,4 +63,16 @@ Select the Card
         
     END
     Click Button    xpath:(//*[@class='card-footer'])[${index}]/button
-    
+
+
+
+Fill the Login Details and Form
+    Input Text        id:username    rahulshettyacademy
+    Input Password    id:password    learning
+    Click Element     css:input[value='user']
+    Wait Until Element Is Visible    css:.modal-body
+    Click Button    okayBtn
+    Click Button    okayBtn
+    Select From List By Value    css:select.form-control    teach
+    Select Checkbox    terms
+    Checkbox Should Be Selected    terms
