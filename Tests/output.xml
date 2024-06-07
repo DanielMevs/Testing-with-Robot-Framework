@@ -1,204 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.10.6 on win32)" generated="2024-06-06T17:48:45.440487" rpa="false" schemaversion="5">
-<suite id="s1" name="testDemo2" source="C:\Users\danny\Documents\automation_development\robot_scripts\practice\Tests\testDemo2.robot">
-<test id="s1-t1" name="Select the Form and navigate to Child window" line="25">
+<robot generator="Robot 7.0 (Python 3.10.6 on win32)" generated="2024-06-07T18:00:03.439775" rpa="false" schemaversion="5">
+<suite id="s1" name="testDemo3" source="C:\Users\danny\Documents\automation_development\robot_scripts\practice\Tests\testDemo3.robot">
+<test id="s1-t1" name="Validate Child Window Functionality" line="14">
 <kw name="open the browser with the Mortgage payment url" owner="resource" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-06T17:48:45.605007" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<msg time="2024-06-07T18:00:03.622805" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
 <arg>${url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-06T17:48:45.604007" elapsed="2.889641"/>
+<status status="PASS" start="2024-06-07T18:00:03.622805" elapsed="2.993097"/>
 </kw>
-<status status="PASS" start="2024-06-06T17:48:45.604007" elapsed="2.890638"/>
+<status status="PASS" start="2024-06-07T18:00:03.621805" elapsed="2.994097"/>
 </kw>
-<kw name="Fill the Login Details and Form">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-06T17:48:48.496647" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
-<arg>id:username</arg>
-<arg>rahulshettyacademy</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-06T17:48:48.495648" elapsed="0.174067"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-06-06T17:48:48.670233" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2024-06-06T17:48:48.705886" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>id:password</arg>
-<arg>learning</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-06T17:48:48.670233" elapsed="0.117874"/>
-</kw>
+<kw name="Select the link of Child window">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-06T17:48:48.789108" level="INFO">Clicking element 'css:input[value='user']'.</msg>
-<arg>css:input[value='user']</arg>
+<msg time="2024-06-07T18:00:06.617900" level="INFO">Clicking element 'css:.blinkingText'.</msg>
+<arg>css:.blinkingText</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-06T17:48:48.788107" elapsed="0.049048"/>
+<status status="PASS" start="2024-06-07T18:00:06.617900" elapsed="0.101405"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>css:.modal-body</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-06T17:48:48.837155" elapsed="0.242041"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-07T18:00:11.735800" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-07T18:00:06.719846" elapsed="5.015954"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-06-06T17:48:49.079196" level="INFO">Clicking button 'okayBtn'.</msg>
-<arg>okayBtn</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-06T17:48:49.079196" elapsed="0.044520"/>
+<status status="PASS" start="2024-06-07T18:00:06.616903" elapsed="5.118897"/>
 </kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-06-06T17:48:49.123716" level="INFO">Selecting options from selection list 'css:select.form-control' by value teach.</msg>
-<arg>css:select.form-control</arg>
-<arg>teach</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-06-06T17:48:49.123716" elapsed="0.060000"/>
+<kw name="Verify the user is Switched to Child window">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-06-07T18:00:11.736802" elapsed="0.017512"/>
 </kw>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-06-06T17:48:49.183716" level="INFO">Selecting checkbox 'terms'.</msg>
-<msg time="2024-06-06T17:48:50.656604" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-06-06T17:48:50.656604" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (397, 486). Other element would receive the click: &lt;div id="myModal" class="modal fade show" style="display: block;"&gt;...&lt;/div&gt;
-  (Session info: chrome=125.0.6422.142)
-Stacktrace:
-	GetHandleVerifier [0x00007FF694D71F52+60322]
-	(No symbol) [0x00007FF694CECEC9]
-	(No symbol) [0x00007FF694BA7EBA]
-	(No symbol) [0x00007FF694BFF32E]
-	(No symbol) [0x00007FF694BFCCF2]
-	(No symbol) [0x00007FF694BFA18B]
-	(No symbol) [0x00007FF694BF9356]
-	(No symbol) [0x00007FF694BEB491]
-	(No symbol) [0x00007FF694C1C21A]
-	(No symbol) [0x00007FF694BEADB6]
-	(No symbol) [0x00007FF694C1C430]
-	(No symbol) [0x00007FF694C3BC80]
-	(No symbol) [0x00007FF694C1BFC3]
-	(No symbol) [0x00007FF694BE9617]
-	(No symbol) [0x00007FF694BEA211]
-	GetHandleVerifier [0x00007FF6950894AD+3301629]
-	GetHandleVerifier [0x00007FF6950D36D3+3605283]
-	GetHandleVerifier [0x00007FF6950C9450+3563680]
-	GetHandleVerifier [0x00007FF694E24326+790390]
-	(No symbol) [0x00007FF694CF750F]
-	(No symbol) [0x00007FF694CF3404]
-	(No symbol) [0x00007FF694CF3592]
-	(No symbol) [0x00007FF694CE2F9F]
-	BaseThreadInitThunk [0x00007FFB76CF257D+29]
-	RtlUserThreadStart [0x00007FFB7842AA48+40]
-</msg>
-<arg>terms</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="FAIL" start="2024-06-06T17:48:49.183716" elapsed="1.476517">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (397, 486). Other element would receive the click: &lt;div id="myModal" class="modal fade show" style="display: block;"&gt;...&lt;/div&gt;
-  (Session info: chrome=125.0.6422.142)
-Stacktrace:
-	GetHandleVerifier [0x00007FF694D71F52+60322]
-	(No symbol) [0x00007FF694CECEC9]
-	(No symbol) [0x00007FF694BA7EBA]
-	(No symbol) [0x00007FF694BFF32E]
-	(No symbol) [0x00007FF694BFCCF2]
-	(No symbol) [0x00007FF694BFA18B]
-	(No symbol) [0x00007FF694BF9356]
-	(No symbol) [0x00007FF694BEB491]
-	(No symbol) [0x00007FF694C1C21A]
-	(No symbol) [0x00007FF694BEADB6]
-	(No symbol) [0x00007FF694C1C430]
-	(No symbol) [0x00007FF694C3BC80]
-	(No symbol) [0x00007FF694C1BFC3]
-	(No symbol) [0x00007FF694BE9617]
-	(No symbol) [0x00007FF694BEA211]
-	GetHandleVerifier [0x00007FF6950894AD+3301629]
-	GetHandleVerifier [0x00007FF6950D36D3+3605283]
-	GetHandleVerifier [0x00007FF6950C9450+3563680]
-	GetHandleVerifier [0x00007FF694E24326+790390]
-	(No symbol) [0x00007FF694CF750F]
-	(No symbol) [0x00007FF694CF3404]
-	(No symbol) [0x00007FF694CF3592]
-	(No symbol) [0x00007FF694CE2F9F]
-	BaseThreadInitThunk [0x00007FFB76CF257D+29]
-	RtlUserThreadStart [0x00007FFB7842AA48+40]
-</status>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-07T18:00:11.754314" level="INFO">Verifying element 'css:h1' contains exact text 'DOCUMENTS REQUEST'.</msg>
+<arg>css:h1</arg>
+<arg>DOCUMENTS REQUEST</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-07T18:00:11.754314" elapsed="0.022002"/>
 </kw>
-<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
-<arg>terms</arg>
-<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
-<status status="NOT RUN" start="2024-06-06T17:48:50.661239" elapsed="0.000000"/>
+<status status="PASS" start="2024-06-07T18:00:11.736802" elapsed="0.039514"/>
 </kw>
-<status status="FAIL" start="2024-06-06T17:48:48.495648" elapsed="2.165783">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (397, 486). Other element would receive the click: &lt;div id="myModal" class="modal fade show" style="display: block;"&gt;...&lt;/div&gt;
-  (Session info: chrome=125.0.6422.142)
-Stacktrace:
-	GetHandleVerifier [0x00007FF694D71F52+60322]
-	(No symbol) [0x00007FF694CECEC9]
-	(No symbol) [0x00007FF694BA7EBA]
-	(No symbol) [0x00007FF694BFF32E]
-	(No symbol) [0x00007FF694BFCCF2]
-	(No symbol) [0x00007FF694BFA18B]
-	(No symbol) [0x00007FF694BF9356]
-	(No symbol) [0x00007FF694BEB491]
-	(No symbol) [0x00007FF694C1C21A]
-	(No symbol) [0x00007FF694BEADB6]
-	(No symbol) [0x00007FF694C1C430]
-	(No symbol) [0x00007FF694C3BC80]
-	(No symbol) [0x00007FF694C1BFC3]
-	(No symbol) [0x00007FF694BE9617]
-	(No symbol) [0x00007FF694BEA211]
-	GetHandleVerifier [0x00007FF6950894AD+3301629]
-	GetHandleVerifier [0x00007FF6950D36D3+3605283]
-	GetHandleVerifier [0x00007FF6950C9450+3563680]
-	GetHandleVerifier [0x00007FF694E24326+790390]
-	(No symbol) [0x00007FF694CF750F]
-	(No symbol) [0x00007FF694CF3404]
-	(No symbol) [0x00007FF694CF3592]
-	(No symbol) [0x00007FF694CE2F9F]
-	BaseThreadInitThunk [0x00007FFB76CF257D+29]
-	RtlUserThreadStart [0x00007FFB7842AA48+40]
-</status>
+<kw name="Grab the Email id in the Child Window">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-07T18:00:11.797318" level="INFO">${text} = Please email us at mentor@rahulshettyacademy.com with below template to receive response</msg>
+<var>${text}</var>
+<arg>css:.red</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-07T18:00:11.777315" elapsed="0.021000"/>
 </kw>
-<kw name="Close Browser session" owner="resource" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
+<kw name="Split String" owner="String">
+<msg time="2024-06-07T18:00:11.799318" level="INFO">@{words} = [ Please email us  |  mentor@rahulshettyacademy.com with below templ | e to receive response ]</msg>
+<var>@{words}</var>
+<arg>${text}</arg>
+<arg>at</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-06-07T18:00:11.798315" elapsed="0.001003"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2024-06-07T18:00:11.800317" level="INFO">${text_split} =  mentor@rahulshettyacademy.com with below templ</msg>
+<var>${text_split}</var>
+<arg>${words}</arg>
+<arg>1</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2024-06-07T18:00:11.800317" elapsed="0.000000"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-06-07T18:00:11.800317" level="INFO">@{final_split} = [ mentor@rahulshettyacademy.com | with | below | templ ]</msg>
+<var>@{final_split}</var>
+<arg>${text_split}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-06-07T18:00:11.800317" elapsed="0.000000"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2024-06-07T18:00:11.801316" level="INFO">${email} = mentor@rahulshettyacademy.com</msg>
+<var>${email}</var>
+<arg>${final_split}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2024-06-07T18:00:11.801316" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-06-07T18:00:11.801316" level="INFO">${email} = mentor@rahulshettyacademy.com</msg>
+<arg>${email}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-06-07T18:00:11.801316" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-06-07T18:00:11.777315" elapsed="0.024001"/>
+</kw>
+<kw name="Switch to Parent window and enter the Email">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-06-07T18:00:11.802318" elapsed="0.026999"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-07T18:00:11.841325" level="INFO">Page title is 'LoginPage Practise | Rahul Shetty Academy'.</msg>
+<arg>LoginPage Practise | Rahul Shetty Academy</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-06-07T18:00:11.829317" elapsed="0.012008"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-07T18:00:11.842324" level="INFO">Typing text 'mentor@rahulshettyacademy.com' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-07T18:00:11.841325" elapsed="0.193025"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-07T18:00:15.044235" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-07T18:00:12.034350" elapsed="3.009885"/>
+</kw>
+<status status="PASS" start="2024-06-07T18:00:11.802318" elapsed="3.241917"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-06T17:48:50.662435" elapsed="3.652570"/>
+<status status="PASS" start="2024-06-07T18:00:15.045234" elapsed="2.187133"/>
 </kw>
-<status status="PASS" start="2024-06-06T17:48:50.661431" elapsed="3.653574"/>
-</kw>
-<status status="FAIL" start="2024-06-06T17:48:45.603005" elapsed="8.712000">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (397, 486). Other element would receive the click: &lt;div id="myModal" class="modal fade show" style="display: block;"&gt;...&lt;/div&gt;
-  (Session info: chrome=125.0.6422.142)
-Stacktrace:
-	GetHandleVerifier [0x00007FF694D71F52+60322]
-	(No symbol) [0x00007FF694CECEC9]
-	(No symbol) [0x00007FF694BA7EBA]
-	(No symbol) [0x00007FF694BFF32E]
-	(No symbol) [0x00007FF694BFCCF2]
-	(No symbol) [0x00007FF694BFA18B]
-	(No symbol) [0x00007FF694BF9356]
-	(No symbol) [0x00007FF694BEB491]
-	(No symbol) [0x00007FF694C1C21A]
-	(No symbol) [0x00007FF694BEADB6]
-	(No symbol) [0x00007FF694C1C430]
-	(No symbol) [0x00007FF694C3BC80]
-	(No symbol) [0x00007FF694C1BFC3]
-	(No symbol) [0x00007FF694BE9617]
-	(No symbol) [0x00007FF694BEA211]
-	GetHandleVerifier [0x00007FF6950894AD+3301629]
-	GetHandleVerifier [0x00007FF6950D36D3+3605283]
-	GetHandleVerifier [0x00007FF6950C9450+3563680]
-	GetHandleVerifier [0x00007FF694E24326+790390]
-	(No symbol) [0x00007FF694CF750F]
-	(No symbol) [0x00007FF694CF3404]
-	(No symbol) [0x00007FF694CF3592]
-	(No symbol) [0x00007FF694CE2F9F]
-	BaseThreadInitThunk [0x00007FFB76CF257D+29]
-	RtlUserThreadStart [0x00007FFB7842AA48+40]
-</status>
+<status status="PASS" start="2024-06-07T18:00:03.620803" elapsed="13.612088"/>
 </test>
 <doc>To validate Login form</doc>
-<status status="FAIL" start="2024-06-06T17:48:45.441488" elapsed="8.874514"/>
+<status status="PASS" start="2024-06-07T18:00:03.441774" elapsed="13.792163"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="testDemo2">testDemo2</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="testDemo3">testDemo3</stat>
 </suite>
 </statistics>
 <errors>
