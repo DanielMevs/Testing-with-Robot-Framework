@@ -38,5 +38,5 @@ Grab the Email id in the Child Window
 Switch to Parent window and enter the Email
     Switch Window    MAIN
     Title Should Be    LoginPage Practise | Rahul Shetty Academy
-    Input Text    id:username    ${email}
+    Input Text    id:username    ${em                            ail}
 #    Sleep    3
