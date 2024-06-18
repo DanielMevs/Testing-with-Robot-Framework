@@ -18,7 +18,7 @@ ${Shop_page_load}    css:.nav-link
 
 #Validate Cards display in the Shopping Page
 #    Fill The Login Form    ${user_name}    ${valid_password}
-#    Wait until Element is visible on the page    ${Shop_page_load}
+#    Wait until Element is visible on the pagcfe    ${Shop_page_load}
 #    Verify Card titles in the Shop page
 #    Select the Card    Nokia Edge
 

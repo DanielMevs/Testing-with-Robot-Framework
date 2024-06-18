@@ -1,30 +1,28 @@
 *** Settings ***
 Documentation    To validate Login form
 Library    SeleniumLibrary
-Library    DataDriver
+Library    DataDriver    file=resources/data.csv    dialect=excel    encoding=utf_8
 Test Teardown    Close Browser
 Test Template    Validate Unsuccessful Login
 
 *** Variables ***
 ${Error_Message_Login}    class:alert-danger
 
-*** Test Cases ***    username     password
-Invalid username      dsahed       learning
-Invalid password      rahulshetty  ploufg
-Special characters    @#$          learning
+*** Test Cases ***
+Login with user ${username} and password ${password}    xyc    123456
     
 
 *** Keywords ***
-open the browser with the Mortgage payment url
-    Open Browser    https://rahulshettyacademy.com/loginpagePractise/    chrome
-    Sleep    2s
-
 Validate Unsuccessful Login
     [Arguments]    ${username}    ${password}
     open the browser with the Mortgage payment url
     Fill the login form    ${username}    ${password}
     Wait until it checks and display error message
     Verify error message is correct
+
+open the browser with the Mortgage payment url
+    Open Browser    https://rahulshettyacademy.com/loginpagePractise/    chrome
+    Sleep    2s
 
 Fill the login form
     [Arguments]       ${username}    ${password}
