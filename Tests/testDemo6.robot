@@ -2,6 +2,7 @@
 Documentation   To validate Login form
 Library         SeleniumLibrary
 Library         Collections
+Library         ../customLibraries/Shop.py
 Test Setup      open the browser with the Mortgage payment url
 Test Teardown   Close Browser Session
 Resource        resource.robot
@@ -20,6 +21,7 @@ Validate Cards display in the Shopping Page
     Fill The Login Form    ${user_name}    ${valid_password}
     Wait until Element is visible on the page    ${Shop_page_load}
     Verify Card titles in the Shop page
+    Hello World
     Select the Card    Nokia Edge
 
 Select the Form and navigate to Child window
