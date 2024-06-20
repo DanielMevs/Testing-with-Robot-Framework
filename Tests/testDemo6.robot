@@ -10,6 +10,7 @@ Resource        resource.robot
 *** Variables ***
 ${Error_Message_Login}    class:alert-danger
 ${Shop_page_load}    css:.nav-link
+@{listOfProducts}    Blackberry    Nokia Edge
 *** Test Cases ***
 Validate Unsuccessful Login
 
@@ -22,7 +23,7 @@ Validate Cards display in the Shopping Page
     Wait until Element is visible on the page    ${Shop_page_load}
     Verify Card titles in the Shop page
     Hello World
-    Select the Card    Nokia Edge
+    Add Items To Cart And Checkout    @{listOfProducts}
 
 Select the Form and navigate to Child window
     Fill The Login Details And Form
