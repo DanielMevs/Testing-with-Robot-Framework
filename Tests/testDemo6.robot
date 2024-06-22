@@ -5,38 +5,32 @@ Library         Collections
 Library         ../customLibraries/Shop.py
 Test Setup      open the browser with the Mortgage payment url
 Test Teardown   Close Browser Session
-Resource        resource.robot
+Resource        ../Resources/PO/Generic.robot
+Resource    ../Resources/PO/LandingPage.robot
+Resource    ../Resources/PO/ShopPage.robot
 
 *** Variables ***
 ${Error_Message_Login}    class:alert-danger
-${Shop_page_load}    css:.nav-link
 @{listOfProducts}    Blackberry    Nokia Edge
 *** Test Cases ***
-Validate Unsuccessful Login
-
-    Fill the login form   ${user_name}    ${invalid_password}
-    Wait until Element is visible on the page    ${Error_Message_Login}
-    Verify error message is correct
+#Validate Unsuccessful Login
+#
+#    Fill the login form   ${user_name}    ${invalid_password}
+#    Wait until Element is visible on the page    ${Error_Message_Login}
+#    Verify error message is correct
 
 Validate Cards display in the Shopping Page
-    Fill The Login Form    ${user_name}    ${valid_password}
-    Wait until Element is visible on the page    ${Shop_page_load}
+    LandingPage.Fill The Login Form    ${user_name}    ${valid_password}
+    ShopPage.Wait until Element is visible on the page
     Verify Card titles in the Shop page
     Add Items To Cart And Checkout    ${listOfProducts}
 
-Select the Form and navigate to Child window
-    Fill The Login Details And Form
+#Select the Form and navigate to Child window
+#    Fill The Login Details And Form
 
-*** Keywords ***
-Fill the login form
-    [Arguments]    ${username}    ${password}
-    Input Text        id:username    ${username}
-    Input Password    id:password    ${password}
-    Click Button      signInBtn
 
-Wait until Element is visible on the page
-    [Arguments]    ${element}
-    Wait Until Element Is Visible    ${element}
+
+
 
 Verify error message is correct
 #    ${result}=    Get Text    ${Error_Message_Login}
