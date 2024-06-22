@@ -14,9 +14,16 @@ ${invalid_password}     123445
 ${valid_password}       learning
 ${url}                  https://rahulshettyacademy.com/loginpagePractise/
 
+
 *** Keywords ***
+
+
 open the browser with the Mortgage payment url
     Open Browser    ${url}    chrome
 
 Close Browser session
     Close Browser
+
+Wait Until element passed is located on Page
+    [Arguments]    ${page_locator}
+    Wait Until Element Is Visible    ${page_locator}
