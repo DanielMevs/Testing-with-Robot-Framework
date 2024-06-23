@@ -18,6 +18,7 @@ class Shop:
         for idx, productsTitle in enumerate(productTitles):
             if productsTitle.text in productsList:
                 self.selfLib.click_button(self.getCardSelector(idx))
+        self.selfLib.click_link("css:li.active a")
 
     def getCardSelector(self, idx):
         return f"xpath:(//*[@class='card-footer'])[{idx+1}]/button"
