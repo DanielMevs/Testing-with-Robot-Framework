@@ -5,6 +5,7 @@ Library         Collections
 Test Setup      open the browser with the Mortgage payment url
 Test Teardown   Close Browser Session
 Resource        resource.robot
+Resource        ../Resources/PO/Generic.robot
 
 *** Variables ***
 ${Error_Message_Login}    class:alert-danger
@@ -28,6 +29,7 @@ Select the Form and navigate to Child window
 *** Keywords ***
 Fill the login form
     [Arguments]    ${username}    ${password}
+    Wait Until Element Is Visible    username
     Input Text        id:username    ${username}
     Input Password    id:password    ${password}
     Click Button      signInBtn

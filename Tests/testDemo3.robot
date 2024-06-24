@@ -6,6 +6,7 @@ Library         Collections
 Test Setup      open the browser with the Mortgage payment url
 Test Teardown   Close Browser
 Resource        resource.robot
+Resource        ../Resources/PO/Generic.robot
 
 *** Variables ***
 ${Error_Message_Login}    class:alert-danger
@@ -19,6 +20,7 @@ Validate Child Window Functionality
 
 *** Keywords ***
 Select the link of Child window
+    Wait Until Element Is Visible    css:.blinkingText
     Click Element    css:.blinkingText
     Sleep    5
     
@@ -38,5 +40,5 @@ Grab the Email id in the Child Window
 Switch to Parent window and enter the Email
     Switch Window    MAIN
     Title Should Be    LoginPage Practise | Rahul Shetty Academy
-    Input Text    id:username    ${em                            ail}
+    Input Text    id:username    ${email}
 #    Sleep    3

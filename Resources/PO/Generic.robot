@@ -21,6 +21,10 @@ ${url}                  https://rahulshettyacademy.com/loginpagePractise/
 open the browser with the Mortgage payment url
     Open Browser    ${url}    chrome
 
+open the browser with the url
+    [Arguments]    ${browser_name}
+    Open Browser    ${url}    ${browser_name}
+
 Close Browser session
     Close Browser
 

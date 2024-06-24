@@ -10,6 +10,7 @@ ${Shop_page_load}    css:.nav-link
 *** Keywords ***
 
 Wait until Element is visible on the page
+    Sleep    5s
     Wait Until element passed is located on Page    ${Shop_page_load}
 
 
