@@ -19,13 +19,14 @@ ${country_name}      United States of America
 
 *** Test Cases ***
 Validate Unsuccessful Login
-
+    [Tags]    SMOKE
     LandingPage.Fill the login form   ${user_name}    ${invalid_password}
     LandingPage.Wait until Element is visible on the page
     LandingPage.Verify error message is correct
 
 
-Validate Cards display in the Shopping Page
+End to end ecommerce Product validation
+    [Tags]    REGRESSION
     LandingPage.Fill The Login Form    ${user_name}    ${valid_password}
     ShopPage.Wait until Element is visible on the page
     ShopPage.Verify Card titles in the Shop page

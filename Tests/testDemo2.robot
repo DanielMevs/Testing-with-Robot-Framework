@@ -4,7 +4,6 @@ Library         SeleniumLibrary
 Library         Collections
 Test Setup      open the browser with the Mortgage payment url
 Test Teardown   Close Browser Session
-Resource        resource.robot
 Resource        ../Resources/PO/Generic.robot
 
 *** Variables ***
@@ -12,7 +11,7 @@ ${Error_Message_Login}    class:alert-danger
 ${Shop_page_load}    css:.nav-link
 *** Test Cases ***
 Validate Unsuccessful Login
-
+    [Tags]    SMOKE
     Fill the login form   ${user_name}    ${invalid_password}
     Wait until Element is visible on the page    ${Error_Message_Login}
     Verify error message is correct
