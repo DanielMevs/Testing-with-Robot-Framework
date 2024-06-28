@@ -1,5 +1,6 @@
 from robot.api.deco import library, keyword
 from robot.libraries.BuiltIn import BuiltIn
+from time import sleep
 
 
 @library
@@ -18,6 +19,7 @@ class Shop:
         for idx, productsTitle in enumerate(productTitles):
             if productsTitle.text in productsList:
                 self.selfLib.click_button(self.getCardSelector(idx))
+
         self.selfLib.click_link("css:li.active a")
 
     def getCardSelector(self, idx):

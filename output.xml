@@ -1,131 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.10.6 on win32)" generated="2024-06-24T19:55:01.226022" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.10.6 on win32)" generated="2024-06-27T18:45:01.095376" rpa="false" schemaversion="5">
 <suite id="s1" name="Practice" source="C:\Users\danny\Documents\automation_development\robot_scripts\practice">
 <suite id="s1-s1" name="Tests" source="C:\Users\danny\Documents\automation_development\robot_scripts\practice\Tests">
-<suite id="s1-s1-s1" name="testDemo6" source="C:\Users\danny\Documents\automation_development\robot_scripts\practice\Tests\testDemo6.robot">
-<test id="s1-s1-s1-t1" name="Select the Form and navigate to Child window" line="38">
-<kw name="open the browser with the url" owner="Generic" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-24T19:55:01.439054" level="INFO">Opening browser 'firefox' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
-<arg>${url}</arg>
-<arg>${browser_name}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-24T19:55:01.438055" elapsed="7.218606"/>
+<suite id="s1-s1-s1" name="testDemo7" source="C:\Users\danny\Documents\automation_development\robot_scripts\practice\Tests\testDemo7.robot">
+<test id="s1-s1-s1-t1" name="Get the Book Details which got added" line="30">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-06-27T18:45:02.207954" level="INFO">GET Request : url=https://rahulshettyacademy.com/Library/GetBook.php?ID=94320332453 
+ path_url=/Library/GetBook.php?ID=94320332453 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-06-27T18:45:02.207954" level="INFO">GET Response : url=https://rahulshettyacademy.com/Library/GetBook.php?ID=94320332453 
+ status=200, reason=OK 
+ headers={'Date': 'Thu, 27 Jun 2024 22:45:01 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '87', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'} 
+ body=[{"book_name":"RobotFramework","isbn":"943203","aisle":"32453","author":"rahulshetty"}] 
+ </msg>
+<msg time="2024-06-27T18:45:02.207954" level="INFO">${get_response} = &lt;Response [200]&gt;</msg>
+<var>${get_response}</var>
+<arg>${base_url}/Library/GetBook.php</arg>
+<arg>params=ID=94320332453</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-06-27T18:45:01.197715" elapsed="1.010239"/>
 </kw>
-<arg>firefox</arg>
-<status status="PASS" start="2024-06-24T19:55:01.436053" elapsed="7.221609"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-27T18:45:02.208953" level="INFO">[{'book_name': 'RobotFramework', 'isbn': '943203', 'aisle': '32453', 'author': 'rahulshetty'}]</msg>
+<arg>${get_response.json()}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-27T18:45:02.207954" elapsed="0.000999"/>
 </kw>
-<kw name="Fill the Login Details and Form" owner="LandingPage">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id:username</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-24T19:55:08.657662" elapsed="0.038057"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${book_name}</arg>
+<arg>${get_response.json()}[0][book_name]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-06-27T18:45:02.208953" elapsed="0.000693"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-24T19:55:08.695719" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
-<arg>id:username</arg>
-<arg>rahulshettyacademy</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-24T19:55:08.695719" elapsed="0.071096"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-06-24T19:55:08.767815" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2024-06-24T19:55:08.772818" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>id:password</arg>
-<arg>learning</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-24T19:55:08.766815" elapsed="0.031000"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-24T19:55:08.798815" level="INFO">Clicking element 'css:input[value='user']'.</msg>
-<arg>css:input[value='user']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-24T19:55:08.797815" elapsed="0.215037"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>css:.modal-body</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-24T19:55:09.012852" elapsed="0.008999"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>okayBtn</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-24T19:55:09.022850" elapsed="0.010003"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-06-24T19:55:09.032853" level="INFO">Clicking button 'okayBtn'.</msg>
-<arg>okayBtn</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-24T19:55:09.032853" elapsed="0.225046"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-24T19:55:14.264685" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-24T19:55:09.257899" elapsed="5.006786"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-06-24T19:55:14.266190" level="INFO">Clicking button 'okayBtn'.</msg>
-<arg>okayBtn</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-24T19:55:14.264685" elapsed="0.218214"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2024-06-24T19:55:19.761460" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-06-24T19:55:19.761460" level="FAIL">Element 'css:.select.form-control' not visible after 5 seconds.</msg>
-<arg>css:.select.form-control</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-06-24T19:55:14.483899" elapsed="5.279558">Element 'css:.select.form-control' not visible after 5 seconds.</status>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<arg>css:select.form-control</arg>
-<arg>teach</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="NOT RUN" start="2024-06-24T19:55:19.763457" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>terms</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-06-24T19:55:19.763457" elapsed="0.000000"/>
-</kw>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<arg>terms</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-06-24T19:55:19.763457" elapsed="0.000000"/>
-</kw>
-<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
-<arg>terms</arg>
-<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
-<status status="NOT RUN" start="2024-06-24T19:55:19.763457" elapsed="0.001000"/>
-</kw>
-<status status="FAIL" start="2024-06-24T19:55:08.657662" elapsed="11.106795">Element 'css:.select.form-control' not visible after 5 seconds.</status>
-</kw>
-<kw name="Close Browser session" owner="Generic" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-24T19:55:19.764457" elapsed="2.836138"/>
-</kw>
-<status status="PASS" start="2024-06-24T19:55:19.764457" elapsed="2.836138"/>
-</kw>
-<status status="FAIL" start="2024-06-24T19:55:01.435054" elapsed="21.165541">Element 'css:.select.form-control' not visible after 5 seconds.</status>
+<status status="PASS" start="2024-06-27T18:45:01.196709" elapsed="1.013243"/>
 </test>
-<doc>To validate Login form</doc>
-<status status="FAIL" start="2024-06-24T19:55:01.248028" elapsed="21.353567"/>
+<status status="PASS" start="2024-06-27T18:45:01.117930" elapsed="1.092022"/>
 </suite>
-<status status="FAIL" start="2024-06-24T19:55:01.246028" elapsed="21.356568"/>
+<status status="PASS" start="2024-06-27T18:45:01.115925" elapsed="1.095028"/>
 </suite>
-<status status="FAIL" start="2024-06-24T19:55:01.229023" elapsed="21.374574"/>
+<status status="PASS" start="2024-06-27T18:45:01.097898" elapsed="1.114055"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Practice">Practice</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">Practice.Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="testDemo6">Practice.Tests.testDemo6</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Practice">Practice</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Practice.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="testDemo7">Practice.Tests.testDemo7</stat>
 </suite>
 </statistics>
 <errors>

@@ -13,7 +13,7 @@ ${user_name}            rahulshettyacademy
 ${invalid_password}     123445
 ${valid_password}       learning
 ${url}                  https://rahulshettyacademy.com/loginpagePractise/
-
+${browser_name}         Chrome
 
 *** Keywords ***
 
@@ -22,7 +22,6 @@ open the browser with the Mortgage payment url
     Open Browser    ${url}    chrome
 
 open the browser with the url
-    [Arguments]    ${browser_name}
     Open Browser    ${url}    ${browser_name}
 
 Close Browser session

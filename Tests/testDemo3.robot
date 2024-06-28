@@ -12,6 +12,7 @@ ${Error_Message_Login}    class:alert-danger
 
 *** Test Cases ***
 Validate Child Window Functionality
+    [Tags]    NEWFEATURE
     Select the link of Child window
     Verify the user is Switched to Child window
     Grab the Email id in the Child Window

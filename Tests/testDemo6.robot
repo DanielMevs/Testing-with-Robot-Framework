@@ -3,7 +3,7 @@ Documentation   To validate Login form
 Library         SeleniumLibrary
 Library         Collections
 Library         ../Resources/customLibraries/Shop.py
-Test Setup      open the browser with the url    firefox
+Test Setup      open the browser with the url
 Test Teardown   Close Browser Session
 Resource        ../Resources/PO/Generic.robot
 Resource    ../Resources/PO/LandingPage.robot
@@ -19,10 +19,11 @@ ${country_name}      United States of America
 
 *** Test Cases ***
 Validate Unsuccessful Login
-    [Tags]    SMOKE
+    [Tags]    SMOKE    REGRESSION
     LandingPage.Fill the login form   ${user_name}    ${invalid_password}
     LandingPage.Wait until Element is visible on the page
     LandingPage.Verify error message is correct
+
 
 
 End to end ecommerce Product validation
